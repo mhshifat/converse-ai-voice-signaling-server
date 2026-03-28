@@ -21,7 +21,7 @@ Handles WebRTC signaling for **live human voice** during handoff: human agent sp
 
 ## Render free tier (“spins down after inactivity”)
 
-You *can* point an external uptime service (e.g. UptimeRobot, cron-job.org) at `https://your-service.onrender.com/health` every few minutes. That sometimes **reduces cold starts** so the process is already running when someone opens the widget.
+**Recommended:** Use [cron-job.org](https://cron-job.org) (or UptimeRobot, etc.) with **GET** `https://your-service.onrender.com/health` every **10–15 minutes**. That **reduces cold starts** compared to a daily ping and avoids Vercel cron limits if you are not using Vercel Pro.
 
 **Limits:**
 
